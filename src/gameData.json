@@ -1,0 +1,107 @@
+{
+    "totalGameQue":10,
+    "perQuestionTime":30,
+    "questionArray":[
+        {
+            "question":"Which is the largest country in the world?",
+            "answer":"Russia"
+        },
+        {
+            "question":"Which country has the largest population in the world?",
+            "answer":"China"
+        },
+        {
+            "question":"In which country would you find the Leaning Tower of Pisa?",
+            "answer":"Italy"
+        },
+        {
+            "question":"Which is the hottest continent on Earth?",
+            "answer":"Africa"
+        },
+        {
+            "question":"Which is the coldest place on Earth?",
+            "answer":"Antarctica"
+        },
+        {
+            "question":"Which continent is Britain part of?",
+            "answer":"Europe"
+        },
+        {
+            "question":"Where are the Andes mountains located?",
+            "answer":"South America"
+        },
+        {
+            "question":"From whom did the USA purchase Alaska from?",
+            "answer":"Russia"
+        },
+        {
+            "question":"Which countries have pyramids older than egypt?",
+            "answer":"Sudan"
+        },
+        {
+            "question":"Which country is also known as the Netherlands?",
+            "answer":"Holland"
+        },
+        {
+            "question":"Which is the country with the most number of capital cities?",
+            "answer":"South Africa"
+        },
+        {
+            "question":"Ceylon is the former name of which country?",
+            "answer":"Sri Lanka"
+        },
+        {
+            "question":"Which is the smallest country in Asia by population?",
+            "answer":"The Maldives"
+        },
+        {
+            "question":"Which is the smallest country in the world?",
+            "answer":"Vatican City"
+        },
+        {
+            "question":"Which country is called the Land of Rising Sun?",
+            "answer":"Japan"
+        },
+        {
+            "question":"Which European country shares its border with the most neighbors?",
+            "answer":"Germany"
+        },
+        {
+            "question":"Which country shares the same peninsula as Portugal?",
+            "answer":"Spain"
+        },
+        {
+            "question":"Which country is Taj Mahal in?",
+            "answer":"India"
+        }
+        ,
+        {
+            "question":"Which country was once known as Rhodesia?",
+            "answer":"Zimbabwe"
+        }
+        ,
+        {
+            "question":"Which is the country with the least population?",
+            "answer":"Vatican City"
+        }
+        ,
+        {
+            "question":"Which South American country has land borders with ten other countries?",
+            "answer":"Brazil"
+        }
+        ,
+        {
+            "question":"Which country is the second biggest in the world?",
+            "answer":"Canada"
+        }
+        ,
+        {
+            "question":"Which European country has a capital city called Bucharest?",
+            "answer":"Romania"
+        },
+        {
+            "question":"Which European country is closest to the continent of Africa?",
+            "answer":"Spain"
+        }
+    ]
+}
