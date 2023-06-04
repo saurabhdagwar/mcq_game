@@ -1,8 +1,7 @@
 # Getting Started with Geography Game 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Available Scripts
 
 In the project directory, you can run:
 
@@ -68,3 +67,20 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+# How to Start Game
+
+## First Unzip the game zip
+## Run the index.html file
+
+# How to play
+
+ Game will start by clicking on play button on homepage
+ There is a question and have four options out of that one option is correct and three options are incorrect.
+ If you select the correct option the correct popup will display and score will mark as correct.
+ If you select any incorrect option incorrect popup will display and incorrect score will increment.
+ There is a timer of 30 sec of each question. If you didn't attempt the question within the time the question will mark as incorrect.
+ You have to attempt 10 question to complete the game.
+ If you solve all questions then Reset popup will appear at last.
+ After reseting the game you will redirected to the home page.
