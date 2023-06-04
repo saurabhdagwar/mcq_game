@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 const Popup = (props) => {
   const [headingMessage, setHeadingMessage] = useState("");
-  const { open, type, onPopupClosed, resetClicked,message } = props;
+  const { open, type, onPopupClosed, resetClicked, message, score } = props;
   useEffect(() => {
     if (open) {
       if (type === "incorrect") {
@@ -23,8 +23,13 @@ const Popup = (props) => {
       <div className={`popup-show ${type}`}>
         <div className={`popup-heading ${type}`}>{headingMessage}</div>
         <div className="popup-message">{message}</div>
+        <div className="score-disp">
+          <div className="score"><b>Correct:</b> {score.correct}</div>
+          <div className="score"><b>Incorrect:</b> {score.incorrect}</div>
+        </div>
+
         {type == "reset" ? (
-          <button onClick={resetClicked}>Back To Home</button>
+          <button onClick={resetClicked}>Play Again</button>
         ) : (
           <button onClick={onPopupClosed}>Close</button>
         )}

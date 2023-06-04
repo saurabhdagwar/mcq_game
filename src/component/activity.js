@@ -10,6 +10,10 @@ const Activity = () => {
     useContext(context);
   const [gameStarted, setGameStarted] = useState(false);
   const [currentQuestion, setCurrentQuestions] = useState({});
+  const [attemptedScore, setAttemtedScore] = useState({
+    correct: 0,
+    incorrect: 0,
+  });
   //   const [popupOpen, setPopupOpen] = useState(false);
   const [popupType, setPopupType] = useState("");
   const [popupMessage, setPopupMessage] = useState("");
@@ -18,15 +22,12 @@ const Activity = () => {
   const timerRef = useRef(null);
   const popupOpen = useRef(false);
 
-  useEffect(() => {}, [questionCount]);
-
   const generateQuestion = () => {
     if (questionCount < 10) {
       openQuestionContainer();
       const question = generateRandomQuestion(questionData);
       setCurrentQuestions(question);
       console.log("Check Que", question);
-      setQuestionCount(questionCount + 1);
       startTimer();
     }
   };
@@ -35,6 +36,11 @@ const Activity = () => {
     setGameStarted(false);
     popupOpen.current = false;
     setPopupType("");
+    setPopupMessage("");
+    setAttemtedScore({
+      correct: 0,
+      incorrect: 0,
+    });
   };
   const startTimer = () => {
     let timerAnimation = anime.timeline({
@@ -76,13 +82,23 @@ const Activity = () => {
   };
 
   const answerClicked = (value) => {
+    let currentSocre = { ...attemptedScore };
     if (value == currentQuestion.correctAnswer) {
       setPopupType("correct");
+      setPopupMessage("Answer is Correct");
+      currentSocre.correct++;
     } else if (value == "time-out") {
       setPopupType("timeout");
+      setPopupMessage("30 Sec of Question time is over");
+      currentSocre.incorrect++;
     } else {
       setPopupType("incorrect");
+      let text = `${currentQuestion.question} : ${currentQuestion.correctAnswer}`;
+      setPopupMessage(text);
+      currentSocre.incorrect++;
     }
+    setQuestionCount(questionCount + 1);
+    setAttemtedScore(currentSocre);
     popupOpen.current = true;
     anime.remove(timerRef.current);
     closingQuestionContainer();
@@ -90,11 +106,13 @@ const Activity = () => {
   const onPopupClosed = () => {
     popupOpen.current = false;
     setPopupType("");
+    setPopupMessage("");
     if (questionCount < 10) {
       generateQuestion();
     } else {
       setTimeout(() => {
         setPopupType("reset");
+        setPopupMessage("Back to home Page");
         popupOpen.current = true;
         anime.remove(timerRef.current);
         closingQuestionContainer();
@@ -153,7 +171,8 @@ const Activity = () => {
       <Popup
         open={popupOpen.current}
         type={popupType}
-        message={""}
+        message={popupMessage}
+        score={attemptedScore}
         onPopupClosed={onPopupClosed}
         resetClicked={resetClicked}
       />
