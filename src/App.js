@@ -20,6 +20,7 @@ function App() {
     questionCount,
     totalGameQue: gameData.totalGameQue,
     questionDuration: gameData.perQuestionTime,
+    lables: gameData.gameLables,
   };
 
   return (

@@ -28,7 +28,7 @@ const Popup = (props) => {
           <div className="score"><b>Incorrect:</b> {score.incorrect}</div>
         </div>
 
-        {type == "reset" ? (
+        {type === "reset" ? (
           <button onClick={resetClicked}>Play Again</button>
         ) : (
           <button onClick={onPopupClosed}>Close</button>
